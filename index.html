@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .content{
+            width: 720px;
+            height:350px;
+            background: red;
+            margin: 120px auto;
+        }
+         .gally{
+           width:620px;
+           height:350px;
+           background: green;
+           border-radius: 10px;
+           float: left;
+       }
+       #photo{
+           padding: 10px;
+       }
+       .intro{
+           width:100px;
+           height: 350px;
+           background: blueviolet;
+           float: right;
+        }
+        .intro ul li {
+           list-style: none;
+           margin:  0 0 4px 0;
+           border: 4px solid goldenrod;
+           border-radius: 5px;
+           word-break: break-all;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="content">
+        <div class="gally">
+            <img id="photo" src="Image/1.jpg"   width="600" height="330" >
+        </div>
+        <div class="intro">
+            <ul>
+                <li>
+                    <a href="Image/1.jpg" title="1"  onmouseover="showPic(this); return false;">
+                        <img src="Image/1.jpg" height="55" width="90">
+                    </a>
+                </li>
+                <li>
+                    <a href="Image/2.jpg" title="2"  onmouseover="showPic(this); return false;">
+                        <img src="Image/2.jpg" height="55" width="90">
+                    </a>
+                </li>
+                <li>
+                    <a href="Image/3.jpg" title="3"  onmouseover="showPic(this); return false;">
+                        <img src="Image/3.jpg" height="55" width="90">
+                    </a>
+                </li>
+                <li>
+                    <a href="Image/4.jpg" title="4"  onmouseover="showPic(this); return false;">
+                        <img src="Image/4.jpg" height="55" width="90">
+                    </a>
+                </li>
+                <li>
+                    <a href=" Image/5.jpg" title="5" onmouseover="showPic(this); return false;">
+                        <img src="Image/5.jpg" height="55" width="90">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<script>
+    function showPic(link) {
+        var img=document.getElementById("photo");
+
+        img.src=link.href;
+    }
+</script>
+</body>
+</html>
