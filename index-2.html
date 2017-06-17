@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program Forum</title>
+    <link rel="shortcut icon" href="Image/b5.ico" type="image/x-icon">
+    <link rel="icon" href="Image/b5.ico" type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            background:forestgreen;
+        }
+        .logo{
+            width: 30%;
+            height: 40px;
+            /*background: blueviolet;*/
+            margin-left: 10%;
+            float: left;
+            font-family: 楷体;
+            font-size:24px;
+            font-style: italic;
+            font-weight: bold;
+            color: white;
+            line-height: 40px;
+            padding-left: 20px;
+            animation:myfirst 15s;
+            -moz-animation:myfirst 15s; /* Firefox */
+            -webkit-animation:myfirst 15s; /* Safari and Chrome */
+            -o-animation:myfirst 15s; /* Opera */
+        }
+        @keyframes myfirst
+        {
+            from {color:navajowhite;}
+            to {color:yellow;}
+        }
+
+        @-moz-keyframes myfirst /* Firefox */
+        {
+            from {color:navajowhite;}
+            to {color:yellow;}
+        }
+
+        @-webkit-keyframes myfirst /* Safari and Chrome */
+        {
+            from {color:navajowhite;}
+            to {color:yellow;}
+        }
+
+        @-o-keyframes myfirst /* Opera */
+        {
+            from {color:navajowhite;}
+            to {color:yellow;}
+        }
+        .login{
+            width: 40%;
+            height: 40px;
+            /*background: yellowgreen;*/
+            margin-right: 10%;
+            float: right;
+            font-size:16px;
+            text-align: right;
+            padding-right: 30px;
+            line-height: 40px;
+            color: white;
+            cursor: pointer;
+        }
+        #login-table{
+            display: none;
+            width: 300px;
+            height: 200px;
+            background:seagreen;
+            position: absolute;
+            border-radius: 5px;
+            top: 200px;
+            left:550px;
+            z-index: 5;
+        }
+        #login-table h3{
+            position: relative;
+            font-style: italic;
+            top:10px;
+            text-align: center;
+        }
+        #login-table label{
+            width: 80px;
+            height: 30px;
+            line-height: 20px;
+            font-size: 20px;
+            position:relative;
+            top: 20px;
+            left: 10px;
+            margin-bottom: 5px;
+
+        }
+        #login-table #username{
+            width: 190px;
+            height: 25px;
+            line-height:18px;
+            font-size: 20px;
+
+            position:relative;
+            top: 20px;
+            left: 10px;
+            margin-bottom: 5px;
+
+        }
+        #login-table #pwd{
+            width: 190px;
+            height: 25px;
+            line-height: 18px;
+            font-size: 20px;
+            position:relative;
+            top: 20px;
+            left: 10px;
+            margin-bottom: 5px;
+
+        }
+        #login-table #submit{
+            width: 100px;
+            height: 30px;
+            line-height: 20px;
+            font-size: 20px;
+            text-align: center;
+            border: 2px solid green;
+            border-radius: 5px;
+            background: green;
+            position:relative;
+            top: 40px;
+            left: 35px;
+            margin-bottom: 5px;
+
+        }
+        #login-table #reg{
+            width: 100px;
+            height: 30px;
+            line-height: 20px;
+            font-size: 20px;
+            text-align: center;
+            border: 2px solid green;
+            border-radius: 5px;
+            background: green;
+            position:relative;
+            top: 40px;
+            left: 65px;
+            margin-bottom: 5px;
+        }
+        #mask{
+            display: none;
+            width: 100%;
+            height:100%;
+            background: white;
+            opacity: 0.5;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+        .clear{
+            clear: both;
+        }
+        nav{
+            width:80%;
+            height: 50px;
+            margin: auto;
+            margin-top: 5px;
+            margin-bottom: 0px;
+
+            z-index: 1;
+        }
+        nav ul{
+            width: 90%;
+            height:50px;
+            margin: auto;
+            line-height: 40px;
+            border-top: 2px solid #006000;
+            border-left: 2px solid #006000;
+            border-right: 2px solid #006000;
+            border-radius: 35px 0 0 0;
+        }
+        nav ul li{
+            width:120px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            display: block;
+            color: white;
+            float: left;
+            text-align: center;
+            margin-left: 25px;
+        }
+        nav ul li:hover{
+            background: green;
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+<div id="mask"></div>
+    <header>
+        <div class="logo">
+            欢迎进入编程的世界！
+        </div>
+        <div class="login">
+            <span id="login">登录</span>||<span id="regedit">注册</span>
+        </div>
+        <div id="login-table">
+            <form class="login-form">
+                <h3>欢迎登录！</h3>
+                <label>用户名：</label>
+                <input type="text" id="username" name="username" placeholder="请输入用户名"><br><br>
+                <label>密&nbsp;&nbsp; 码：</label>
+                <input type="password" id="pwd" name="pwd" placeholder="请输入密码"><br>
+                <input type="submit" id="submit" name="submit"><input type="button" id="reg" value="注册"></input>
+            </form>
+        </div>
+        <div class="clear"></div>
+        <nav>
+            <ul>
+                <li>
+                    首页
+                </li>
+                <li>
+                    论坛
+                </li>
+                <li>
+                    资讯
+                </li>
+                <li>
+                    图片
+                </li>
+                <li>
+                    联系我们
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+<script>
+    var login = document.getElementById("login");
+    var mask = document.getElementById("mask");
+    login.onclick = function () {
+        document.getElementById("login-table").style.display="block";
+        document.getElementById("mask").style.display="block";
+    }
+    mask.onclick = function () {
+        document.getElementById("mask").style.display="none";
+        document.getElementById("login-table").style.display="none";
+    }
+</script>
+</body>
+</html>
